@@ -13,7 +13,6 @@ class ArtificialNeuron:
         #This is the Z = (x1*w1 + x2*w2 + ...) + b
         weighted_sum = np.dot(inputs, self.weights) + self.bias
         self.output = self.activation_function(weighted_sum)
-
         return self.output
 
     def train_step(self, expected_output, learning_rate):
