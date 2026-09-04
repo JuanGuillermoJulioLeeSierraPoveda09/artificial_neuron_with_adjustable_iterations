@@ -10,7 +10,7 @@ class ArtificialNeuron:
 
     def forward(self, inputs):
         self.last_inputs = inputs
-        #This is the Z = (x1*w1 + x2*w2 + ...) + b
+        #This is the "Z = (x1*w1 + x2*w2 + ...) + b" function
         weighted_sum = np.dot(inputs, self.weights) + self.bias
         self.output = self.activation_function(weighted_sum)
         return self.output
